@@ -4,8 +4,10 @@ This is an example from the University Of Birmingham School of Computer Science'
 This program is an intepreter written in Haskell using Parser Combinators to translate and execute instructions in the language. The language has no form of IO commands and so accepts an integer input value x and a output variable y hence it is the XY Interpeter.
 
 **Executing a program**
+```
 > runhaskell Runxy <program>.xy <Integer x>
 y
+```
 
 ## Structure
 
@@ -13,6 +15,7 @@ Given a `String` containing a wellformed XY program in the given *concrete synta
 - The program is parsed to produce a program tree in abstract syntax
 - This will be used with an initial storage , an assignment of values to program variables, the program will be ran to produce a new storage
 
+```
                                                                  | initial
                                                                  | storage
                                                                  v           final
@@ -20,7 +23,7 @@ Given a `String` containing a wellformed XY program in the given *concrete synta
 --------------------->| Parser.hs | -------------------->| Interpreter.hs | -------->
   (concrete syntax)   +-----------+  (AbstractSyntax.hs) +----------------+
   (a string)
-
+```
 
 ## Concrete Syntax
 
